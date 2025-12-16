@@ -149,12 +149,15 @@ Create the virtual cluster through the vCluster Platform UI or the vCluster CLI:
 
 You can configure the **NodeProvider** with the following options:
 
-| Option                        | Default       | Description                                                                                 |
-| ----------------------------- | ------------- | ------------------------------------------------------------------------------------------- |
-| `vcluster.com/ccm-enabled`    | `true`        | Enables deployment of the Cloud Controller Manager.                                         |
-| `vcluster.com/ccm-lb-enabled` | `true`        | Enables the CCM service controller. If disabled, CCM will not create LoadBalancer services. |
-| `vcluster.com/csi-enabled`    | `true`        | Enables deployment of the CSI driver with a `<provider>-default-disk` storage class.                 |
-| `vcluster.com/vpc-cidr`       | `10.0.0.0/16` | Sets the VPC CIDR range. Useful in multi-cloud scenarios to avoid CIDR conflicts.           |
+| Option                                               | Default       | Description                                                                                        |
+| ---------------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------- |
+| `vcluster.com/ccm-enabled`                           | `true`        | Enables deployment of the Cloud Controller Manager.                                                |
+| `vcluster.com/ccm-lb-enabled`                        | `true`        | Enables the CCM service controller. If disabled, CCM will not create LoadBalancer services.        |
+| `vcluster.com/csi-enabled`                           | `true`        | Enables deployment of the CSI driver with a `<provider>-default-disk` storage class.               |
+| `vcluster.com/vpc-cidr`                              | `10.0.0.0/16` | Sets the VPC CIDR range. Useful in multi-cloud scenarios to avoid CIDR conflicts.                  |
+| `vcluster.com/control-plane-vpc-peering`             | `false`       | Enables VPC peering between the new VPC created for auto nodes and the vCluster control plane VPC. |
+| `vcluster.com/control-plane-vpc-id`                  |               | The ID of the vCluster control plane VPC to peer with, if enabled.                                 |
+| `vcluster.com/control_plane_vpc_peering_dns_enabled` | `true`        | Allows each VPC to resolve DNS names to private IP addresses in the peer VPC                       |
 
 ## Example
 

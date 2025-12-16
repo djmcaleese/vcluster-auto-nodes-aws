@@ -27,3 +27,8 @@ output "cluster_tag" {
   description = "Global tag of all provisioned AWS resources"
   value       = local.cluster_tag
 }
+
+output "control_plane_vpc_peering_connection_id" {
+  description = "VPC peering connection ID to the vCluster control plane VPC (if enabled)"
+  value       = try(aws_vpc_peering_connection.control_plane[0].id, null)
+}

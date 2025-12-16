@@ -14,7 +14,12 @@
         "ec2:DescribeVpcs",
         "ec2:DescribeVpcAttribute",
         "ec2:DescribeVpcClassicLink",
-        "ec2:DescribeVpcClassicLinkDnsSupport"
+        "ec2:DescribeVpcClassicLinkDnsSupport",
+        "ec2:CreateVpcPeeringConnection",
+        "ec2:AcceptVpcPeeringConnection",
+        "ec2:DeleteVpcPeeringConnection",
+        "ec2:DescribeVpcPeeringConnections",
+        "ec2:ModifyVpcPeeringConnectionOptions"
       ],
       "Resource": "*"
     },
